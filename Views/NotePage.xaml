@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:Notes.ViewModels"
              x:Class="Notes.Views.NotePage"
-             Title="Note">
+             Title="Notas">
     <ContentPage.BindingContext>
         <viewModels:NoteViewModel />
     </ContentPage.BindingContext>
@@ -15,11 +15,13 @@
                 HeightRequest="100" />
 
         <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
-            <Button Style="{StaticResource JGButton}"
+            <Button x:Name="JGButton1"
+                    Style="{StaticResource JGButton}"
                     Text="Save"
                     Command="{Binding SaveCommand}"/>
 
-            <Button Style="{StaticResource JGButton}"
+            <Button x:Name="JGButton2"
+                    Style="{StaticResource JGButton}"
                     Grid.Column="1"
                     Text="Delete"
                     Command="{Binding DeleteCommand}"/>
